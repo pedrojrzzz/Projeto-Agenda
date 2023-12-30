@@ -1,0 +1,41 @@
+.folha-vermelha {
+    background: url('/public/assets/folha-vermelha.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbarFolha-vermelha {
+    background-color: #37020A;
+}
+
+.gotas-agua {
+    background: url('/public/assets/gotas-agua.jpeg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.noite-estrelada{
+    background: url('/public/assets/noite-estrelada.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbarNoite-estrelada {
+    background-color: #07141A;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/assets/style.css">
+    <link rel="stylesheet" href="/public/assets/alteracoesCores.css">
+</head>
+<body>
+    <header>
+        
+        <nav>
+            
+
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="sobre">Sobre</li>
+                <li class="ajuda">Ajuda</li>
+                <li class="configuraçoes">Configurações</li>
+            </ul>
+            
+            <div class="logo">
+                <a href="#">AGENDA</a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main>
+
+        <dialog class="sobrePopUp modal">
+            <h2>Sobre</h2>
+            <p>O projeto de agenda é uma aplicação dedicada a simplificar
+                 e organizar sua rotina diária. Com uma interface intuitiva e fácil de usar, 
+                 os usuários podem adicionar, editar e excluir eventos, compromissos e tarefas, 
+                 garantindo uma gestão eficiente de seus compromissos. A agenda oferece 
+                 funcionalidades robustas, incluindo notificações para lembretes, categorização 
+                 de eventos e uma visualização clara e organizada do calendário. Desenvolvido com 
+                 tecnologias web modernas, o projeto visa fornecer uma solução flexível e 
+                 acessível para manter todos os seus compromissos organizados em um único lugar.</p>
+            <button class="fechar">Fechar</button>
+        </dialog>
+
+        <dialog class="ajudaPopUp modal">
+            <h2>Ajuda</h2>
+            <p>Texto Exemplo</p>
+            <button class="fechar">Fechar</button>
+        </dialog>
+
+        <dialog class="configuraçoesPopUp modal">
+            <h2>Configurações</h2>
+            <label for="">Alterar imagem de fundo:</label>
+            <select name="" class="imgFundo">
+                <option value="padrao">Padrão</option>
+                <option value="noite-estrelada">Noite estrelada</option>
+                <option value="folha-vermelha">Folha vermelha</option>
+                <option value="gotas-agua">Gotas de água</option>
+
+            </select>
+            <button class="fechar aplicar">Aplicar</button>
+        </dialog>
+
+<br>
+
+
+        <div class="container-add-task">
+            <h2>Adicionar</h2>
+            <label for="">Título *</label>
+            <input style="padding: 4px;" type="text" class="titulo">
+            <div class="erro1"></div>
+        <br>
+            <label for="">Data/Hora *</label>
+            <input style="padding: 4px;" type="datetime-local" class="dataHora">
+            <div class="erro2"></div>
+        <br>
+            <label for="">Local</label>
+            <input style="padding: 4px;" type="text" class="local">
+        <br>
+            <label for="">Anotação</label> <br>
+            <textarea style='resize: none'cols="30" rows="7" class="anotacao"></textarea>
+        <br>
+            <button class="enviar" style="margin-top: 20px; padding: 5px;">Adicionar</button>
+        </div>
+
+        <div class="container-recebe-task"></div>
+
+
+
+
+
+        <dialog class="editValues">
+            <p class="fechar">&#10005</p>
+
+
+            <h2>Editar</h2>
+            <label for="">Título *</label>
+            <input style="padding: 4px;" type="text" class="editTitulo">
+            <div class="erroEdit1"></div>
+        <br>
+            <label for="">Data/Hora *</label>
+            <input style="padding: 4px;" type="datetime-local" class="editDataHora">
+            <div class="erroEdit2"></div>
+        <br>
+            <label for="">Local</label>
+            <input style="padding: 4px;" type="text" class="editLocal">
+        <br>
+            <label for="">Anotação</label> <br>
+            <textarea style='resize: none'cols="30" rows="7" class="editAnotacao"></textarea>
+            
+        <br>
+            <button class="editEnviar" style="margin-top: 20px; padding: 5px;">Aplicar</button>
+        </dialog>
+
+    </main>
+    <script src="/public/assets/js/bundle.js"></script>
+</body>
+</html>
