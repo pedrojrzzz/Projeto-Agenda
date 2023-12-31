@@ -47,6 +47,8 @@ function criaElementos(titulo, dataHora, local, anotacao) {
   divAlteradores.classList.add('divAlteradores');
   _h3.innerHTML = titulo;
   _dataHora.innerHTML = '&#128198 ' + dataHora;
+  _local.innerHTML = '&#x1F4CC ' + local;
+  _anotacao.innerHTML = '&#128214 ' + anotacao;
   _removedor.innerHTML = '&#128465;';
   _removedor.classList.add('iconRemovedor');
   _editar.innerHTML = '&#128393;';
@@ -154,7 +156,9 @@ function editTask(el, pai) {
   var anotacao = valuesInputOriginal[3].innerText;
   editTitulo.value = titulo.replace(/[^\x00-\x7F]+/g, '');
   editLocal.value = local.replace(/[^\x00-\x7F]+/g, '');
+  editLocal.value = editLocal.value.replace(' ', '');
   editAnotacao.value = anotacao.replace(/[^\x00-\x7F]+/g, '');
+  editAnotacao.value = editAnotacao.value.replace(' ', '');
 
   //
 

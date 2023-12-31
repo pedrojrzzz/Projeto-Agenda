@@ -3,6 +3,7 @@ function addTasks () {
     let dataHora = document.querySelector('.dataHora').value
     const local = document.querySelector('.local').value
     const anotacao = document.querySelector('.anotacao').value
+  
 
     const dH = dataHora.replace('T', ' ')
     dataHora = dH.replace(/-/g, '/')
@@ -41,6 +42,8 @@ function criaElementos (titulo, dataHora, local, anotacao) {
     divAlteradores.classList.add('divAlteradores')
     _h3.innerHTML = titulo
     _dataHora.innerHTML = '&#128198 ' + dataHora
+    _local.innerHTML = '&#x1F4CC '+ local
+    _anotacao.innerHTML = '&#128214 ' + anotacao
 
     _removedor.innerHTML = '&#128465;'; _removedor.classList.add('iconRemovedor')
     _editar.innerHTML = '&#128393;'; _editar.classList.add('iconEditar')

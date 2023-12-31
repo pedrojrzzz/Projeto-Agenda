@@ -27,7 +27,9 @@ function editTask(el, pai) {
 
     editTitulo.value = titulo.replace(/[^\x00-\x7F]+/g, '')
     editLocal.value = local.replace(/[^\x00-\x7F]+/g, '');
+    editLocal.value = editLocal.value.replace(' ', '')
     editAnotacao.value = anotacao.replace(/[^\x00-\x7F]+/g, '');
+    editAnotacao.value = editAnotacao.value.replace(' ', '')
 
     //
 
