@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    background: url('./public/assets/bg.jpg');
+    background: url('../bg.jpg');
     background-size: cover;
     background-position: center;
     height: 92vh;
