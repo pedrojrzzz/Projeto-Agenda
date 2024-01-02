@@ -1,5 +1,5 @@
 .folha-vermelha {
-    background: url('/agenda/public/assets/folha-vermelha.jpg') no-repeat center center;
+    background: url('../assets/folha-vermelha.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 92vh;
@@ -14,7 +14,7 @@
 }
 
 .gotas-agua {
-    background: url('/agenda/public/assets/gotas-agua.jpeg') no-repeat center center;
+    background: url('../assets/gotas-agua.jpeg') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 92vh;
@@ -26,7 +26,7 @@
 }
 
 .noite-estrelada{
-    background: url('/agenda/public/assets/noite-estrelada.jpg') no-repeat center center;
+    background: url('../assets/noite-estrelada.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 92vh;
