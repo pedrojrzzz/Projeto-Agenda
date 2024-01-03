@@ -81,34 +81,36 @@ function background() {
   var optionSelecionado = select.value;
   var main = document.querySelector('main');
   var navbar = document.querySelector('nav');
+  var container_recebe_task = document.querySelector('.container-recebe-task');
   switch (optionSelecionado) {
     case 'padrao':
-      if (main.classList.contains('noite-estrelada' || 0 || 0)) {
-        main.classList.remove('noite-estrelada' || 0 || 0);
-      }
-      main.classList.remove('noite-estrelada', 'folha-vermelha', 'gotas-agua');
-      navbar.classList.remove('navbarNoite-estrelada', 'navbarFolha-vermelha', 'navbarGotas-agua');
+      limpandoClasses(optionSelecionado);
       break;
     case 'noite-estrelada':
-      if (main.classList.contains('noite-estrelada' || 0 || 0)) {
-        main.classList.remove('noite-estrelada' || 0 || 0);
-      }
+      limpandoClasses(optionSelecionado);
       main.classList.add('noite-estrelada');
-      navbar.classList.add('navbarNoite-estrelada');
       break;
     case 'folha-vermelha':
-      if (main.classList.contains('noite-estrelada' || 0 || 0)) {
-        main.classList.remove('noite-estrelada' || 0 || 0);
-      }
+      limpandoClasses(optionSelecionado);
       main.classList.add('folha-vermelha');
-      navbar.classList.add('navbarFolha-vermelha');
       break;
     case 'gotas-agua':
-      if (main.classList.contains('noite-estrelada' || 0 || 0)) {
-        main.classList.remove('noite-estrelada' || 0 || 0);
-      }
+      limpandoClasses(optionSelecionado);
       main.classList.add('gotas-agua');
       break;
+  }
+}
+function limpandoClasses(optionSelecionado) {
+  var main = document.querySelector('main');
+  var classes = ['padrao', 'folha-vermelha', 'noite-estrelada', 'gotas-agua'];
+  var buscar = optionSelecionado;
+  var posicao = classes.indexOf(buscar);
+  classes.splice(posicao, 1);
+  if (main.classList.contains('folha-vermelha') || main.classList.contains('noite-estrelada') || main.classList.contains('gotas-agua')) {
+    console.log('teste');
+    for (var i = 0; i < classes.length; i++) {
+      main.classList.remove(classes[i]);
+    }
   }
 }
 

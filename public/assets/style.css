@@ -206,6 +206,13 @@ main {
     overflow: auto;
     margin-left: 40px;
     margin-top: 10px;
+    background-color: transparent;
+
+}
+
+.container-recebe-task > .divCreateAuto {
+    opacity: 1;
+    backdrop-filter: blur(2px);
 }
 
 .enviar {

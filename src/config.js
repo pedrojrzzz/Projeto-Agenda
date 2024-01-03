@@ -1,43 +1,54 @@
 
+
 function background () {
     const select = document.querySelector('.imgFundo')
     const optionSelecionado = select.value
     const main = document.querySelector('main')
     const navbar = document.querySelector('nav')
-
+    const container_recebe_task = document.querySelector('.container-recebe-task')
+    
     switch (optionSelecionado) {
         case 'padrao':
-            if (main.classList.contains('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')){
-                main.classList.remove('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')
-            }
-            main.classList.remove('noite-estrelada', 'folha-vermelha', 'gotas-agua')
-            navbar.classList.remove('navbarNoite-estrelada', 'navbarFolha-vermelha', 'navbarGotas-agua')
+            limpandoClasses(optionSelecionado)
             break;
         
         case 'noite-estrelada':
-            if (main.classList.contains('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')){
-                main.classList.remove('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')
-            }
+            limpandoClasses(optionSelecionado)
             main.classList.add('noite-estrelada')
-            navbar.classList.add('navbarNoite-estrelada')
+
             break;
 
         case 'folha-vermelha':
-            if (main.classList.contains('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')){
-                main.classList.remove('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')
-            }
+            limpandoClasses(optionSelecionado)
             main.classList.add('folha-vermelha')
-            navbar.classList.add('navbarFolha-vermelha')
+            
             break;
 
         case 'gotas-agua':
-            if (main.classList.contains('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')){
-                main.classList.remove('noite-estrelada' || 'folha-vermelha' || 'gotas-agua')
-            }
+            limpandoClasses(optionSelecionado)
             main.classList.add('gotas-agua')
             
             break;
     }
+}
+
+function limpandoClasses(optionSelecionado) {
+    const main = document.querySelector('main')
+
+    const classes = ['padrao', 'folha-vermelha', 'noite-estrelada', 'gotas-agua']
+    
+    let buscar = optionSelecionado
+    const posicao = classes.indexOf(buscar)
+    classes.splice(posicao, 1)
+
+    if (main.classList.contains('folha-vermelha') || main.classList.contains('noite-estrelada') || main.classList.contains('gotas-agua')){
+        console.log('teste')
+        for (let i = 0; i < classes.length; i++) {
+            main.classList.remove(classes[i])
+        }
+    }
+
+    
 }
 
 export { background }
